@@ -21,3 +21,12 @@ module "frontend" {
   domain = "${data.terraform_remote_state.route.domain}"
   zone_id ="${data.terraform_remote_state.route.zone_id}"
 }
+
+module "cloudfront" {
+  source = "../../modules/cloudfront"
+  
+  env = "prod"
+  certificate_arn = "${module.frontend.certificate_arn}"
+  domain = "${data.terraform_remote_state.route.domain}"
+  zone_id = "${data.terraform_remote_state.route.zone_id}"
+}
