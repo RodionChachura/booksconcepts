@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-          Books concepts will be here.
+            Books concepts will be here.(prod)
           </p>
         </header>
       </div>

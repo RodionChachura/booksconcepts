@@ -1,4 +1,3 @@
-npm install
 npm run build
 aws s3 cp build s3://$BUCKET --recursive
 aws configure set preview.cloudfront true
